@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Gallery Header */
+        .gallery-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .gallery-header h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .gallery-header p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 40px;
+            padding:  40px;
+            margin-bottom: 40px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modal (for larger image view) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .modal:target {
+            display: flex;
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer p {
+            margin: 10px 0;
+        }
+        footer .social-links a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 0 10px;
+        }
+        footer .social-links a:hover {
+            color: #f39c12;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-header h1 {
+                font-size: 2em;
+            }
+            .gallery-header p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="galary.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <!-- Gallery Header -->
+    <section class="gallery-header" id="gallery">
+        <h1>My Gallery</h1>
+        <p>Explore My collection of images showcasing.</p>
+    </section>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-container">
+        <h2> Chocolates </h2>
+        <div class="gallery-item">
+            <img src="https://www.hutchrec.com/wp-content/uploads/2021/01/Depositphotos_18441315_xl-2015-1024x683.jpg" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="https://insanelygoodrecipes.com/wp-content/uploads/2022/08/Sweet-Homemade-Chocolate-Christmas-Truffles-768x1152.jpg" alt="Image 2">
+        </div>
+        
+    </div>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Amreen Sarang. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
